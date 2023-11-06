@@ -3,7 +3,8 @@
 ## CDN
 
 ### CDN setup
-![Picture](images/container_setup_az.png"Text to show on mouseover")
+
+![Picture](images/container_setup_az.png "Text to show on mouseover")
 ![Picture](images/az_storage_setup1.png "Text to show on mouseover")
 ![Picture](images/az_storagesetup_2.png "Text to show on mouseover")
 ![Picture](images/az_storage_setup_3.png "Text to show on mouseover")
