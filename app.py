@@ -6,7 +6,7 @@ app = Flask(__name__)
 df = pd.read_csv('plans.csv')
 @app.route('/')
 def index(data=df):
-    data = data
+    data = data.sample(30)
     return render_template('index.html', data=data)
 
 if __name__ == '__main__':

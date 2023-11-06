@@ -3,32 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> New York Insurance Plan Premium Overview</title>
+    <title> New York Health Insurance Plan Premium Overview</title>
     <!-- Include Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <header class="bg-pink-300 text-white p-4">
+    <h1 class="text-2xl font-bold mb-4 text-center">New York Health Insurance Premium Comparision App</h1>
+    </header>
 </head>
-<body class="bg-gray-200 p-4">
-    <div class="max-w-screen-md mx-auto bg-white p-4 shadow-md">
-        <h1 class="text-2xl font-bold mb-4 text-center">Insurance Plans</h1>
 
+<body class="bg-sand-200 p-4">
+    <header class="bg-indigo-300 text-white p-4">
+        <h1 class="text-2xl font-bold mb-4 text-center">TikTok Video Explaining Insurance Premiums</h1>
+    </header>
+
+    <div class="h-screen flex items-center justify-center">
         <video width="320" height="240" controls>
+          
             <source src="https://rb-ins-video-cdn.azureedge.net/flaskapp504wk5vid/tiktok_insvideo.mp4" type="video/mp4">
             Your browser does not support the video tag
-            </video>
+            
+        </video>
+      </div>
 
-        <table class="table-auto w-full bg-gray-100">
-            <thead>
-                <tr>
-                    <th class="px-4 py-2">Year</th>
-                    <th class="px-4 py-2">State</th>
-                    <th class="px-4 py-2">Carrier</th>
-                    <th class="px-4 py-2">Plan Name</th>
-                    <th class="px-4 py-2">Premium for 27 Year Old ($)</th>
-                    <th class="px-4 py-2">Premium for 50 Year Old ($)</th>
-                    <th class="px-4 py-2">Premium for 4 Membered Family ($)</th>
-                </tr>
-            </thead>
-            <tbody>
+        {% block content %}
+        <header class="bg-indigo-300 text-white p-4">
+        <h1 class="text-2xl font-bold mb-4 text-center">Insurance Plan Preview</h1>
+        </header>
+
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="table-auto w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                  Health Insurance Plans
+                  <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Browse the list below to review the premium costs of health insurance plans available for purchase in New York State.</p>
+                 </caption>
+                      
+                      <thead class="text-xs text-gray-700 uppercase bg-purple-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Year</th>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">State</th>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Carrier</th>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Plan Name</th>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Premium for 27 Year Old ($)</th>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Premium for 50 Year Old ($)</th>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Premium for 4 Membered Family ($)</th>
+                    </tr>
+                </thead>
+
                 {% for data in data.values %}
                     <tr>
                         <td class="border px-4 py-2">{{ data[1] }}</td>
@@ -40,8 +62,12 @@
                         <td class="border px-4 py-2">{{ data[14] }}</td>
                     </tr>
                 {% endfor %}
-            </tbody>
         </table>
-    </div>
+        {% endblock %}
+    
+    <footer class="bg-pink-300 text-white p-4 m-6">
+        <p>© 2023 New York Health Insurance Premium Comparision Application. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
