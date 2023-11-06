@@ -64,11 +64,12 @@ Code is integrated into the index.html file
         az login --use-device-code
 	    az webapp up --resource-group <groupname> --name <app-name> --runtime <PYTHON:3.9> --sku <B1> 
 
-2. Click on web link with deployed application
+2. Run python app.py in the CLI 
+3. Click on web link with deployed application
 
 ### Responsive design 
 <b>
-- Video was embed with the following code to allow video to be seen on different sized devices
+Video was embed with the following code to allow video to be seen on different sized devices
 
         <div class="md:flex">
           <div class="md:shrink-0">
