@@ -30,8 +30,6 @@ Step 5. Combine the endpoint URL with the CDN url
     Unique URL: https://rb-ins-video-cdn.azureedge.net/flaskapp504wk5vid/tiktok_insvideo.mp4
 
 </b>
-<b> Azure CDV setup, showcasing URL</b>
-![Picture](images/CDN_URL_setup.png "Text to show on mouseover")
 
 <b> Video content hosted on Azure CDN</b>
 ![Picture](images/CDN_video.png "Text to show on mouseover")
